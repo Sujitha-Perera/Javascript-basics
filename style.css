@@ -1,0 +1,20 @@
+.main-title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  padding: 20px;
+  background-color: rgb(194, 209, 194);
+  text-align: center;
+  padding: 2%;
+}
+body {
+  background-color: rgb(133, 170, 102);
+}
+.description {
+  font-size: 20px;
+  font: weight 3px;
+}
+.container {
+  font-family: fantasy;
+  font-variant: normal;
+}
