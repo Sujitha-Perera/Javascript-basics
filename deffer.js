@@ -1,0 +1,110 @@
+//import {add} from "./math";
+// //primitive types
+
+// //Number
+// let userId= 204519;
+// console.log("User id",userId);
+// console.log("Type of user id :", typeof userId);
+
+// //String
+// let email= "sujithascc1@gmailcom";
+// console.log("User email",email);
+// console.log("Type of user email :", typeof email);
+
+// //boolean
+// let isAuthenticated=false;
+// console.log("User auth",isAuthenticated);
+// console.log("Type of user email :", typeof isAuthenticated);
+
+// //null
+// let phoneNumber=null;
+// console.log("User auth",phoneNumber);
+// console.log("Type of user email :", typeof phoneNumber);
+
+// //undefined
+// let dob;
+// console.log("User dob",dob);
+// console.log("Type of user dob :", typeof dob);
+
+// //
+// let uniqueId=Symbol("id");
+// console.log("User uid",uniqueId);
+// console.log("Type of user uid :", typeof uniqueId);
+
+//object types
+
+//object
+//let person={name:"sujitha",age:24}
+
+// console.log("value of person: ",person);
+// console.log("type of person:",typeof person);
+
+// console.log("value of person: ",person.name);
+// console.log("type of person:",typeof person.name);
+
+//array
+// let myArray=[1,2,3,4,5];
+// console.log("value of myarray: ",myArray);
+// console.log("value of myarray: ",myArray.length);
+// console.log("type of myarray:",typeof myArray);
+
+//function befor ES^
+ function greet(name){
+    //return "hello " + name;
+    //Template literals 
+    return `hello, ${name}`;// javascript ES6 version feature 
+ }
+ //calling to a js function with a parameter
+//  console.log("value of function: ",greet("sujitha"));
+//  console.log("type of function:",typeof greet());
+
+//After ES6
+//arrow function
+// const greetTwo=(name)=>{
+//      return `hello, ${name}`;
+// }
+// console.log("value of function: ",greetTwo("sujitha"));
+// console.log("type of function:",typeof greetTwo());
+
+//destructuring
+// let person={name:"sujitha",age:24}
+// const{name,age}=person;
+// console.log("name : ",name);
+// console.log("age:",age);
+
+//nested user object
+let user={
+    name:"suji",
+    age:24,
+    data:{
+        uId:"123456678",
+        token:"233444567jhjjjfjjfg",
+        images:["1234","12324556","1345678"]
+    }
+}
+console.log(user.data.uId);//tradition method
+
+const{uId}=user.data;//destructure method
+console.log(uId)
+console.log("updatedAt:",user.data.updatedAt);
+//optional chaining
+//nulish coalescing
+console.log("updatedAt 123:",user?.data?.updatedAt ?? "N/A");//if value did not excist n/a shown in output
+
+
+//Spread & Rest Operator(ES6)
+const myArray1=[1,2,3,4,5];
+const myArray2=[...myArray1,6,7];//ES6 new feature
+
+myArray1.push(6);//traditional method
+myArray1.push(7);
+myArray1.pop();
+myArray1.pop();console.log(myArray1);
+
+console.log(myArray1,myArray2);
+
+//import and export
+//console.log(math(100,50));
+
+const maintitle=document?.querySelector("main-title");
+console.log(maintitle);
