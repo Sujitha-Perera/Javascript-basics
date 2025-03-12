@@ -11,13 +11,11 @@
 5.Manages asynchronous operations by handling the execution of callbacks.
 
 
-6.
+
 function delayedGreeting(name) {
     console.log("Hello"); 
-
     setTimeout(() => {
         console.log(name); 
     }, 2000);
 }
-
 delayedGreeting("Alice");
