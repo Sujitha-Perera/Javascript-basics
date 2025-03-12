@@ -1,4 +1,9 @@
-export const add=(a,b)=>{
-    return a+b;
+//name function export
+const user={
+    name:"sujitha1",
+    age:24,
 }
-export  const add2=(a,b)=> a+b;
+export{user};//object export
+export function add(a,b){
+    return a+b;//function export
+}

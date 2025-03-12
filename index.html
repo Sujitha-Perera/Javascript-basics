@@ -8,7 +8,15 @@
     <!--external js-->
     <script src="main.js"></script>
     <script src="variable.js"></script>
-    <script src="deffer.js"></script>
+    <script type="module"  src="deffer.js"></script> 
+    
+    <!--embedded  import export handle-->
+    <!-- <script type="module">
+      import {add} from "./math.js";
+      console.log("total is :",add(200,1100));
+      
+    </script> -->
+
     <style>
       /*embedded css*/
       .module-title {
@@ -40,6 +48,7 @@
       <h3 class="module-title">React.js Master course</h3>
 
       <h4 id="introduction">module 01: javascript Fundamental</h4>
+      <button id="main-button">I am the button</button>
     </div>
   </body>
 </html>

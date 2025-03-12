@@ -1,4 +1,4 @@
-//import {add} from "./math";
+import {add} from "./math.js";
 // //primitive types
 
 // //Number
@@ -106,5 +106,113 @@ console.log(myArray1,myArray2);
 //import and export
 //console.log(math(100,50));
 
-const maintitle=document?.querySelector("main-title");
-console.log(maintitle);
+// console.log("I am here before Dom load");
+
+//     const startTime=performance.now();
+//     //event listner
+//     document.addEventListener("DOMContentLoaded",(event)=>{
+//     const endTime=performance.now();
+//     const loadTime=(endTime-startTime).toFixed(2);//calculate the time in milisecond
+
+//     console.log("DOM fully loaded and pased");
+//     console.log(`Dom load time: ${loadTime}ms`);
+
+//     const maintitle=document.querySelector(".main-title");
+//     console.log(maintitle);
+// //change the main title
+// maintitle.textContent="I am the change title"//change DOM
+
+// });
+
+// console.log("I'm here after DOM load!");
+
+//session storage
+
+// console.log("total is:",add(100,40));
+
+// if(sessionStorage.getItem("name")==null){
+//     console.log("name is not set");
+//     sessionStorage.setItem("name","sujithaaa");
+// }else{
+//     console.log("name is:",sessionStorage.getItem("name"))
+// }
+
+//promises
+
+// let myPromise= new Promise((resolve,reject) => {
+//     let success=true;
+//     if(success){
+//         //simulate a delay of 3 seconds
+//         setTimeout(()=>resolve("operation is successful"),3000)
+//         // resolve("operation is successful");
+//     }else{
+//         reject("operation is failed")
+
+//     }
+// });
+// myPromise.then((message)=>{
+//     console.log(message);//operation is successful
+
+// }).catch((error)=>{
+//     console.log(error);//operation is failed
+// }).finally(()=>{
+//     console.log("promise is completed");
+// });
+
+//async wait
+
+// async function fetchTodos(){
+//     try{
+//         let respone = await fetch("https://jsonplaceholder.typicode.com/users");
+//         let data =await respone.json();
+//         if(data){
+//             console.log("respone data",data.username);
+
+//         }
+//     }catch(error){
+//         console.log("error fetching data",error);
+//     }
+// }
+// //call the async function
+// fetchTodos();
+
+// async function initializeApp(){
+//     try{
+//         const message=await myPromise;
+//         console.log("message:",message)
+//         const userResponse= await fetch(
+//             "https://jsonplaceholder.typicode.com/users/1"
+//         );
+//         const user = await userResponse.json();
+//         //check if the user object is not null
+//         if(user?.id){
+//             console.log("response data:",user.id);
+//             const postRespone = await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${user.id}`);
+//             const posts = await postRespone.json();
+//             console.log("posts:",posts);
+//         }
+
+//     }catch(error){
+//         console.log("Error fetching data:",error);
+//     }
+// }
+// initializeApp();
+// console.log("I am after the async function");
+
+//define a function that accept a callback
+function fetchData(callback){
+    console.log("Fetching started:");
+    setTimeout(() => {
+        let data={name:"sujibro",age:24}
+        callback(data);
+        console.log("Timeout completed:")
+    }, 3000);//simulate network request with a delay of 3 seconds
+    console.log("fetching completed")
+}
+//define a callback funcion
+function handleData(data){
+    console.log("data received:",data)
+}
+//call the function with the callback
+//  pass a argument to the fetchData function
+fetchData(handleData);
