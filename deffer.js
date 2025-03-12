@@ -201,13 +201,13 @@ console.log(myArray1,myArray2);
 
 //define a function that accept a callback
 function fetchData(callback){
-    console.log("Fetching started:");
+    // console.log("Fetching started:");
     setTimeout(() => {
         let data={name:"sujibro",age:24}
         callback(data);
-        console.log("Timeout completed:")
+        // console.log("Timeout completed:")
     }, 3000);//simulate network request with a delay of 3 seconds
-    console.log("fetching completed")
+    // console.log("fetching completed")
 }
 //define a callback funcion
 function handleData(data){
@@ -216,3 +216,15 @@ function handleData(data){
 //call the function with the callback
 //  pass a argument to the fetchData function
 fetchData(handleData);
+
+function delayedGreeting(name) {
+    console.log("Hello"); 
+
+    setTimeout(() => {
+        console.log(name); 
+    }, 2000);
+}
+
+delayedGreeting("Alice");
+
+
